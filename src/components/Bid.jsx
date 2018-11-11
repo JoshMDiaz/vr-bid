@@ -35,15 +35,21 @@ class Bid extends Component {
   render() { 
     return (
       <div className="bid">
+        <div className="results">
+          <div>
+            <h2>My Bid</h2>
+            <h3>
+              <NumberFormat value={this.state.bid} prefix="$" decimalScale={2} fixedDecimalScale={true}  thousandSeparator={true} displayType="text" />
+            </h3>
+          </div>
+          <div>
+            <h2>Sub Bid</h2>
+            <h3>
+              <NumberFormat value={this.state.bid / 6} prefix="$" decimalScale={2} fixedDecimalScale={true}  thousandSeparator={true} displayType="text" />
+            </h3>
+          </div>
+        </div>
         <Form update={this.update} />
-        <h2>My Bid</h2>
-        <h3>
-          <NumberFormat value={this.state.bid} prefix="$" decimalScale={2} fixedDecimalScale={true}  thousandSeparator={true} displayType="text" />
-        </h3>
-        <h2>Sub Bid</h2>
-        <h3>
-          <NumberFormat value={this.state.bid / 6} prefix="$" decimalScale={2} fixedDecimalScale={true}  thousandSeparator={true} displayType="text" />
-        </h3>
       </div>
     );
   }

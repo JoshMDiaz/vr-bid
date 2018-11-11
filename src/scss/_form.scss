@@ -1,21 +1,36 @@
+.form-container {
+  padding: 30px 20px;
+}
+
 .form-element {
+  margin-bottom: 20px;
   input {
     width: 100%;
-    height: 35px;
-    padding: 5px;
-    border: 1px solid #ccc;
+    height: 50px;
+    font-weight: 300;
+    padding: 10px;
+    border: 1px solid $gray-color;;
     border-radius: 4px;
+  }
+  label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
   }
 }
 button {
   background: none;
   border-radius: 100px;
-  border: 1px solid;
-  border-color: #ccc;
+  border: 2px solid;
+  font-weight: 700;
+  border-color: $gray-color;;
+  color: $gray-color;;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
+  text-transform: uppercase;
   margin: 10px 0;
   &.primary {
-    border-color: blue;
+    color: $primary-color;
+    border-color: $primary-color;
   }
 }
